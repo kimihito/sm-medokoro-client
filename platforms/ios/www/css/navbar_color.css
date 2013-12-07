@@ -1,0 +1,13 @@
+#youtube {
+	background: #e62c22 !important;
+}
+
+#vimeo {
+	background: #4bf !important;
+}
+
+#fc2 {
+	background: red !important;
+}
+
+.ui-btn-corner-all{-moz-border-radius:0;-webkit-border-radius: 0;border-radius: 0;}
