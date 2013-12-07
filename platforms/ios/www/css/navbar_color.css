@@ -10,4 +10,19 @@
 	background: red !important;
 }
 
-.ui-btn-corner-all{-moz-border-radius:0;-webkit-border-radius: 0;border-radius: 0;}
+
+.ui-navbar { 
+    overflow-x:scroll;
+    overflow-y:hidden;
+    white-space:nowrap;
+}
+
+.ui-navbar a {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.nav-button {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
