@@ -20,9 +20,18 @@
 .ui-navbar a {
 	margin-left: 0px;
 	margin-right: 0px;
+	margin-bottom: 0px;
 }
 
 .nav-button {
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
+}
+
+.ui-btn-up-a{
+	border: 0;
+}
+
+.ui-btn-hover-a{
+	border: 0;
 }
