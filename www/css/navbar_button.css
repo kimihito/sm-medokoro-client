@@ -1,0 +1,41 @@
+.ui-btn{
+	margin: 0px;
+	font-size: 13px;
+}
+
+.ui-btn-inner{
+	padding-top: 30px;
+}
+
+.menu{
+	width: auto;
+}
+
+
+.scroll-nav {
+	overflow-y: hidden;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+	width: auto;
+}
+
+ul{
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+li{
+	display: inline;
+}
+body{
+	text-transform: none;
+}
+
+.ui-page-theme-a{
+	background: #333;
+}
+
+.scroll-nav .ui-header .ui-bar-inherit{
+	background: #333;
+}
