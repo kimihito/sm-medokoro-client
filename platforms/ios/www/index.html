@@ -5,112 +5,91 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.0.min.css" />
         <link rel="stylesheet" type="text/css" href="css/movielist.css" />
+        <link rel="stylesheet" type="text/css" href="css/tile.css" />
         <link rel="stylesheet" type="text/css" href="css/navbar_button.css" />
         <title>Hello World</title>
         <script src="js/jquery/jquery.min.js" type="text/javascript"></script>
-        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script src="js/jquery/jquery.mobile-1.4.0.min.js"></script>
         <script src="js/jquery.fitvids.js" type="text/javascript"></script>
     </head>
     <body>
         <section data-role="page" style="background: #333;" >
             <header data-role="header" data-position="fixed" style="background: #333;">
-            <div id="data-load-status">
-            </div>
-            <div data-role="controlgroup"  data-type="horizontal" class="movie-nav is-all ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
-                <div class="ui-controlgroup-controls" style="width:400px;">
-                    <a href="#" class="movie-nav-tab all is-active ui-btn ui-btn-inline ui-corner-all" id="all" data-status="is-all">ALL</a>
-                    <a href="#youtube" class="movie-nav-tab youtube ui-btn ui-btn-inline ui-corner-all" id="youtube" data-status="is-youtube">Youtube</a>
-                    <a href="#niconico" class="movie-nav-tab niconico ui-btn ui-btn-inline ui-corner-all" id="niconico" data-status="is-niconico">ニコニコ動画</a>
-                    <a href="#" class="movie-nav-tab vimeo ui-btn ui-btn-inline ui-corner-all" id="vimeo" data-status="is-vimeo">Vimeo</a>
-                    <a href="#" class="movie-nav-tab fc2 ui-btn ui-btn-inline ui-corner-all" id="fc2" data-status="is-fc2">FC2</a>
+                <div id="data-load-status">
                 </div>
-            </div>
+                <div data-role="controlgroup"  data-type="horizontal" class="movie-nav is-all ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
+                    <div class="ui-controlgroup-controls" style="width:400px;">
+                        <a href="#" class="movie-nav-tab all is-active ui-btn ui-btn-inline ui-corner-all" id="all" data-status="is-all">ALL</a>
+                        <a href="#youtube" class="movie-nav-tab youtube ui-btn ui-btn-inline ui-corner-all" id="youtube" data-status="is-youtube">Youtube</a>
+                        <a href="#niconico" class="movie-nav-tab niconico ui-btn ui-btn-inline ui-corner-all" id="niconico" data-status="is-niconico">ニコニコ動画</a>
+                        <a href="#vimeo" class="movie-nav-tab vimeo ui-btn ui-btn-inline ui-corner-all" id="vimeo" data-status="is-vimeo">Vimeo</a>
+                        <a href="#fc2" class="movie-nav-tab fc2 ui-btn ui-btn-inline ui-corner-all" id="fc2" data-status="is-fc2">FC2</a>
+                    </div>
+                </div>
             </header>
-            <style>
-/*            .main>div:after{content:'';clear:both;}
-            .main>div{position:relative;}
-            .main>div{width:600px;height:300px;}
-            .main>div>div{float:left;box-shadow:0 0 1px red;}
-            div.box13>div{width:360px;float:right;height:100px;}
-            div.box13>div:first-child{float:left;width:240px;height:300px;}
-            div.box31>div{width:360px;float:left;height:100px;}
-            div.box31>div:last-child{position:absolute;right:0;top:0;width:240px;height:300px;}
-            div.box11>div{width:300px;height:300px;}
-            div.box111>div{width:200px;height:300px;}
-            div.box12>div{width:360px;float:right;height:150px;}
-            div.box12>div:first-child{float:left;width:240px;height:300px;}
-            div.box21>div{width:360px;float:left;height:150px;}
-            div.box21>div:last-child{position:absolute;right:0;top:0;width:240px;height:300px;}
-*/            </style>
-            <div class='main' style="
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: #fff;
-">
-              <div class='box13' style="border: 1px solid red;
-width: 100%;
-height: 214px;">
-                <div class='content' style="
-    width: 38%;
-    border: 1px solid red;
-    height: 100%;
-    float: left;
-    /* position: relative; */
-
-">hogehoge1</div>
-                <div class='content' style="float: right;
-height: 33%;
-width: 60%;
-border: 1px solid red;">hogehoge</div>
-                <div class='content' style="float: right;height: 33%;width: 60%;border: 1px solid red;">hogehoge</div>
-                <div class='content' style="float: right;width:  60%;border: 1px solid red;height: 33%;">hogehoge</div>
-              </div>
-              <div class='box21'>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge1</div>
-              </div>
-              <div class='box11'>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge</div>
-              </div>
-              <div class='box31'>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge1</div>
-              </div>
-              <div class='box12'>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge1</div>
-              </div>
-              <div class='box111'>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge</div>
-                <div class='content'>hogehoge</div>
-              </div>
-            </div>
-
             <!--- トップページを表示-->
             <ul class="movielist" id="top-content" data-role="listview" data-icon="false">
             </ul>
             <!--- youtubeのタブをおしたとき -->
-            <ul class="movielist" id="youtube-content" data-role="listview" style="display:none;" data-icon="false">
-                <li>2014/01/06</li>
-            </ul>
-            <ul class="movielist" id="niconico-content" data-role="listview" data-icon="false" style="display:none;">
-                <li>2014/01/06</li>
-            </ul>
-            <ul class="movielist" id="vimeo-content" data-role="listview" data-icon="false" style="display:none;">
-                <li>2014/01/06</li>
-            </ul>
-            <ul class="movielist" id="fc2-content" data-role="listview" data-icon="false" style="display:none;">
-                <li>2014/01/06</li>
-            </ul>
+            <div class='main movielist' style="display:none;" id='youtube-content'>
+                <div class='box13'>
+                </div>
+                <div class='box21'>
+                </div>
+                <div class='box11'>
+                </div>
+                <div class='box31'>
+                </div>
+                <div class='box12'>
+                </div>
+                <div class='box111'>
+                </div>
+            </div>
+            <!-- ニコニコ動画を -->
+            <div class="main movielist" id="niconico-content" style="display:none;">
+                <div class='box13'>
+                </div>
+                <div class='box21'>
+                </div>
+                <div class='box11'>
+                </div>
+                <div class='box31'>
+                </div>
+                <div class='box12'>
+                </div>
+                <div class='box111'>
+                </div>
+            </div>
+            <div class="main movielist" id="vimeo-content" data-role="listview" data-icon="false" style="display:none;">
+                <div class='box13'>
+                </div>
+                <div class='box21'>
+                </div>
+                <div class='box11'>
+                </div>
+                <div class='box31'>
+                </div>
+                <div class='box12'>
+                </div>
+                <div class="box111">
+                </div>
+            </div>
+            <div class="main movielist" id="fc2-content" data-role="listview" data-icon="false" style="display:none;">
+                <div class='box13'>
+                </div>
+                <div class='box21'>
+                </div>
+                <div class='box11'>
+                </div>
+                <div class='box31'>
+                </div>
+                <div class='box12'>
+                </div>
+                <div class="box111">
+                </div>
+            </div>
             <!--- niconicoのタブをおしたとき-->
         </section>
         <script type="text/javascript" src="cordova.js"></script>

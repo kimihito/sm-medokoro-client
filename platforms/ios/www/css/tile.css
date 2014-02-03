@@ -1,0 +1,109 @@
+body{
+	font-family: inherit;
+}
+
+
+.content {
+	font-size: 13px;
+}
+
+.movielist {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: #fff;
+}
+
+.box13{
+	width: 100%;
+	height: 214px;
+}
+
+.box13 >.content{
+	float: right;
+	height: 33%;
+	width: 60%;
+}
+
+.box13>.content:first-child{
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+
+
+
+.box21{
+	width:100%;
+	height: 214px;
+}
+
+.box21 > .content:first-child{
+	width: 40%;
+	height: 100%;
+	float: right;
+}
+
+.box21 > .content{
+	float: left;
+	width: 60%;
+	height: 50%;
+}
+
+.box11{
+	width: 100%;
+	height: 214px;
+}
+
+.box11 > .content{
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.box31{
+	width: 100%;
+	height: 214px;
+}
+
+.box31 > .content{
+	width: 60%;
+	height: 33%;
+	float: left;
+}
+
+.box31 > .content:nth-child(2){
+	float: right;
+	width: 40%;
+	height: 100%;
+}
+
+.box12 {
+	width: 100%;
+	height: 214px;
+}
+
+.box12 > .content:first-child{
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+
+.box12 > .content{
+	float: right;
+	width: 60%;
+	height: 50%;
+}
+
+.box111 {
+	width: 100%;
+	height: 214px;
+}
+
+.box111 > .content{
+	width: 33%;
+	float: left;
+	height: 100%;
+}
+
+.main>div>div{float:left;box-shadow:0 0 1px red;}
