@@ -5,97 +5,99 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/panel.css" />
+        <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.0.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/movielist.css" />
+        <link rel="stylesheet" type="text/css" href="css/tile.css" />
+        <link rel="stylesheet" type="text/css" href="css/box.css" />
         <link rel="stylesheet" type="text/css" href="css/navbar_button.css" />
         <title>Hello World</title>
         <script src="js/jquery/jquery.min.js" type="text/javascript"></script>
-        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script src="js/jquery/jquery.mobile-1.4.0.min.js"></script>
         <script src="js/jquery.fitvids.js" type="text/javascript"></script>
     </head>
     <body>
-        <script type="text/javascript">
-        //クリックしたら今までのサイズの+1するみたいな動作をかける。
-            $(function(){
-                $("#all").click(function(){
-                    $(".scroll-nav").css("border-bottom", "medium solid rgb(233, 4, 4)");
-                });
-                $("#youtube").click(function(){
-                    $(".scroll-nav").css("border-bottom", "medium solid rgb(4, 124, 218)");
-                });
-
-                $("#niconico").click(function() {
-                    $(".scroll-nav").css("border-bottom", "medium solid orange");
-                });
-
-                $("#vimeo").click(function() {
-                    $(".scroll-nav").css("border-bottom", "medium solid rgb(0, 190, 0)");
-                });
-
-                $("#fc2").click(function() {
-                    $(".scroll-nav").css("border-bottom", "medium solid #C500E0");
-                    $("#data-load-status").css("height","2px")
-                });
-            });
-        </script>
-        <div data-role="page">
-            <div id="data-load-status" style="height:3px;">
-            </div>
-            <div data-role="controlgroup" data-type="horizontal" class="scroll-nav ui-corner-all ui-controlgroup ui-controlgroup-horizontal" style="margin:0px;border-bottom: medium solid red; border-bottom-left-radius: 0px;border-bottom-right-radius:0px;
-
-            ">
-            <div class="ui-controlgroup-controls" style="width:420px;">
-                        <a href="#" class="ui-btn ui-btn-inline ui-corner-all" id="all" style="border-bottom-left-radius:0px;border-top-right-radius: 5px;
-                    background: -moz-linear-gradient(top,#F00 0%,#E90000);
-                    background: -webkit-gradient(linear, left top, left bottom, from(#F00), to(#E90000));
-                    color:#FFF;
-                    font-weight: normal;
-
-
-                        ">ALL</a>
-                         <a href="#" class="menu ui-btn ui-btn-inline ui-corner-all" id="youtube" style="border-top-right-radius: 5px;border-top-left-radius: 5px;
-                    background: -moz-linear-gradient(top,#0085FF 0%,rgb(4, 124, 218));
-                    background: -webkit-gradient(linear, left top, left bottom, from(#0085FF), to(rgb(4, 124, 218)));
-                    color:#FFF;
-
-                    font-weight: normal;
-                    ">Youtube</a>
-                    <a href="#" class="menu ui-btn ui-btn-inline ui-corner-all" id="niconico" style="border-top-right-radius: 5px;border-top-left-radius: 5px;
-                    background: -moz-linear-gradient(top,#FC0 0%,orange);
-                    background: -webkit-gradient(linear, left top, left bottom, from(#FC0), to(orange));
-                    color:#FFF;
-
-                    font-weight: normal;
-                    ">ニコニコ動画</a>
-                    <a href="#" class="menu ui-btn ui-btn-inline ui-corner-all" id="vimeo" style="border-top-right-radius: 5px;border-top-left-radius: 5px;
-                    background: -moz-linear-gradient(top,#00E71C 0%,rgb(0, 190, 0));
-                    background: -webkit-gradient(linear, left top, left bottom, from(#00E71C), to(rgb(0, 190, 0)));
-                    color:#FFF;
-
-                    font-weight: normal;
-                    ">Vimeo</a>
-                    <a href="#" class="menu ui-btn ui-btn-inline ui-corner-all" id="fc2" style="border-top-right-radius: 5px;border-top-left-radius: 5px;border-bottom-right-radius: 0px;
-
-                    background: -moz-linear-gradient(top,#FF00F5 0%,#C500E0);
-                    background: -webkit-gradient(linear, left top, left bottom, from(#FF00F5), to(#C500E0));
-                    color:#FFF;
-                    font-weight: normal;
-                    ">FC2</a>
+        <section data-role="page" style="background: #333;" >
+            <header data-role="header" data-position="fixed" style="background: #333;">
+                <div id="data-load-status">
+                </div>
+                <div data-role="controlgroup"  data-type="horizontal" class="movie-nav is-all ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
+                    <div class="ui-controlgroup-controls" style="width:400px;">
+                        <a href="#" class="movie-nav-tab all is-active ui-btn ui-btn-inline ui-corner-all" id="all" data-status="is-all">ALL</a>
+                        <a href="#youtube" class="movie-nav-tab youtube ui-btn ui-btn-inline ui-corner-all" id="youtube" data-status="is-youtube">Youtube</a>
+                        <a href="#niconico" class="movie-nav-tab niconico ui-btn ui-btn-inline ui-corner-all" id="niconico" data-status="is-niconico">ニコニコ動画</a>
+                        <a href="#vimeo" class="movie-nav-tab vimeo ui-btn ui-btn-inline ui-corner-all" id="vimeo" data-status="is-vimeo">Vimeo</a>
+                        <a href="#fc2" class="movie-nav-tab fc2 ui-btn ui-btn-inline ui-corner-all" id="fc2" data-status="is-fc2">FC2</a>
                     </div>
-
-            </div>
-            <div data-role="content" style="background: #FFF;">
-                <div style="width:80%;">
-                   content
                 </div>
-                <div style="width:20%;">
-                    hhhhh
+            </header>
+            <!--- トップページを表示-->
+            <ul class="movielist" id="top-content" data-role="listview" data-icon="false">
+            </ul>
+            <!--- youtubeのタブをおしたとき -->
+            <div class='main movielist' style="display:none;" id='youtube-content'>
+                <div class='box13'>
+                </div>
+                <div class='box21'>
+                </div>
+                <div class='box11'>
+                </div>
+                <div class='box31'>
+                </div>
+                <div class='box12'>
+                </div>
+                <div class='box111'>
                 </div>
             </div>
-        </div>
+            <!-- ニコニコ動画を -->
+            <div class="main movielist" id="niconico-content" style="display:none;">
+                <div class='box11'>
+                </div>
+                <div class='box111'>
+                </div>
+                <div class='box21'>
+                </div>
+                <div class='box31'>
+                </div>
+                <div class='box12'>
+                </div>
+                <div class='box13'>
+                </div>
+            </div>
+            <div class="main movielist" id="vimeo-content" data-role="listview" data-icon="false" style="display:none;">
+                <div class='box21'>
+                </div>
+                <div class='box13'>
+                </div>
+                <div class='box31'>
+                </div>
+                <div class='box12'>
+                </div>
+                <div class="box111">
+                </div>
+                <div class='box11'>
+                </div>
+            </div>
+            <div class="main movielist" id="fc2-content" data-role="listview" data-icon="false" style="display:none;">
+                <div class='box12'>
+                </div>
+                <div class='box13'>
+                </div>
+                <div class='box21'>
+                </div>
+                <div class='box11'>
+                </div>
+                <div class='box31'>
+                </div>
+                <div class="box111">
+                </div>
+            </div>
+            <!--- niconicoのタブをおしたとき-->
+        </section>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/load_json.js"></script>
+        <script type="text/javascript" src="js/videoPage.js"></script>
+        <script type="text/javascript" src="js/swipe.js"></script>
         <script type="text/javascript" src="js/horizonal_scroll_menu.js"></script>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
