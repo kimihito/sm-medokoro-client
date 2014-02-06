@@ -1,0 +1,234 @@
+.content {
+	font-size: 13px;
+}
+
+.content > a{
+	color: rgb(69,69,69);
+	text-decoration: none;
+}
+
+
+.box13{
+	width: 100%;
+	height: 214px;
+}
+
+.box13 > .content > a > .image > img {
+	width: 100%;
+}
+
+.box13 >.content{
+	float: right;
+	height: 33%;
+	width: 60%;
+	background: #fff;
+}
+
+.box13>.content:first-child{
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+
+.box13>.content:first-child > a >.image{
+	padding: 3px;
+}
+
+.box13>.content > a > .title{
+	padding: 3px;
+}
+
+.box13 > .content:nth-child(2) > a > .image{
+	float: left;
+	display: none;
+}
+
+.box13 > .content:nth-child(2) > a > .title{
+	padding: 3px;
+}
+
+.box13 > .content:nth-child(3) > a > .image{
+	float: left;
+	display: none;
+}
+
+.box13 > .content:last-child > a > .image{
+	float: left;
+	display: none;
+}
+
+.box21{
+	width:100%;
+	height: 214px;
+}
+
+.box21 > .content:first-child{
+	width: 40%;
+	height: 100%;
+	float: right;
+}
+
+.box21 > .content{
+	float: left;
+	width: 60%;
+	height: 50%;
+	background: #fff;
+}
+
+.box21 > .content:first-child > a > .image{
+	padding: 3px;
+}
+
+.box21 > .content:first-child > a > .title{
+	padding: 3px;
+}
+
+.box21 > .content:first-child > a > .image > img{
+	width: 100%;
+}
+
+.box21 > .content:nth-child(2) > a > .image{
+	padding: 3px;
+}
+
+.box21 > .content:nth-child(2) > a > .image > img{
+	width: 100%;
+}
+
+.box21 > .content:nth-child(2) > a > .title{
+	display: none;
+}
+
+.box21 > .content:last-child > a > .image{
+	padding: 3px;
+}
+
+.box21 > .content:last-child > a > .image > img{
+	width: 100%;
+}
+
+.box21 > .content:last-child > a > .title{
+	display: none;
+}
+
+.box11{
+	width: 100%;
+	height: 214px;
+}
+
+.box11 > .content{
+	float: left;
+	width: 50%;
+	height: 100%;
+	background: #fff;
+}
+
+.box11 > .content > a > .image > img{
+	width: 100%;
+}
+
+.box11 > .content > a > .image{
+	padding: 3px;
+}
+
+.box11 > .content > a > .title{
+	padding: 3px;
+}
+
+.box31{
+	width: 100%;
+	height: 214px;
+}
+
+.box31 > .content{
+	width: 60%;
+	height: 33%;
+	float: left;
+	background: #fff;
+}
+
+.box31 > .content > a > .title{
+	padding: 3px;
+}
+
+.box31 > .content > a > .image{
+	display: none;
+}
+
+.box31 > .content:nth-child(2){
+	float: right;
+	width: 40%;
+	height: 100%;
+}
+
+.box31 > .content:nth-child(2) > a > .image {
+	display: block;
+	padding: 3px;
+}
+
+.box31 > .content:nth-child(2) > a > .image > img{
+	width: 100%;
+}
+
+.box12 {
+	width: 100%;
+	height: 214px;
+}
+
+.box12 > .content:first-child{
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+
+.box12 > .content{
+	float: right;
+	width: 60%;
+	height: 50%;
+	background: #fff;
+}
+
+.box12 > .content:first-child > a > .image{
+	padding: 3px;
+}
+
+.box12 > .content:first-child > a > .title{
+	padding: 3px;
+	display: block;
+}
+
+.box12 > .content > a > .title{
+	display: none;
+}
+
+.box12 > .content > a > .image{
+	padding: 3px;
+}
+
+.box12 > .content > a > .image > img{
+	width: 100%;
+}
+
+.box111 {
+	width: 100%;
+	height: 214px;
+}
+
+.box111 > .content{
+	width: 33%;
+	float: left;
+	height: 100%;
+	background: #fff;
+}
+
+.box111 > .content > a > .image{
+	padding: 3px;
+}
+
+.box111 > .content > a > .title{
+	padding: 3px;
+}
+
+.box111 > .content > a > .image > img {
+	width: 100%;
+}
